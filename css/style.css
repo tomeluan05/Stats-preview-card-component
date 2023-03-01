@@ -49,9 +49,13 @@ body{
     border-radius: 15px;
 }
 
-img{
+.image_desktop{
     border-radius: 0 10px 10px 0;
     height: 100%;
+}
+
+.image_mobile{
+    display: none;
 }
 
 .opacity_background{
@@ -101,6 +105,7 @@ img{
     color: var(--slightly-transparent-white);
     line-height: 1.5rem;
     font-weight: 100;
+    max-width: 80%;   
 }
 
 .datas{
@@ -117,7 +122,9 @@ img{
 }
 
 .numbers{
+    font-family: 'Inter';
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .description_numbers{
@@ -128,4 +135,61 @@ img{
     color: var(--slightly-transparent-white);
 }
 
+/* MEDIA QUERY MOBILE */
 
+@media screen and (max-width: 959px){
+    .content{
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .image_desktop{
+        display: none;
+    }
+
+    .image_mobile{
+        display: flex;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .background{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .title{
+        font-size: 1.5rem;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .paragraph{
+        max-width: 100%; 
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    .datas{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .data_content{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .numbers{
+        font-size: 1.3rem;
+    }
+
+    .description_numbers{
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+}
